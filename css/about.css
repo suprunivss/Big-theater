@@ -1,0 +1,34 @@
+.about-theater__wrapper {
+  display: flex;
+  gap: 30px;
+}
+
+.about-theater__information {
+  max-width: 445px;
+}
+
+.information__title {
+  margin-bottom: 40px;
+}
+
+.about-theater__seating {
+  width: 255px;
+}
+
+.seating__title {
+  margin: 0 0 40px 0;
+}
+
+.seating__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.seating__description {
+  margin: 15px 0 0 0;
+}
+
+.seating__description:not(:last-child) {
+  padding-bottom: 15px;
+}

@@ -1,0 +1,150 @@
+.theater {
+  background: url("../img/header.png") no-repeat;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  min-height: 680px;
+  padding-top: 76px;
+}
+
+.theater__container {
+  display: flex;
+}
+
+.theater__description {
+  margin: 0 125px 0 0;
+  width: 538px;
+  padding-top: 120px;
+}
+
+.description__title {
+  margin-bottom: 30px;
+}
+
+.description__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 160px;
+  margin-top: 45px;
+  background: #d1a954;
+  border: none;
+}
+
+.description__button:hover {
+  background: #cd6326;
+  transition: 300ms;
+}
+
+.description__button:active {
+  background: #8f5613;
+  transition: 300ms;
+}
+
+.carousel__preview {
+  width: 370px;
+  height: 510px;
+}
+
+.carousel__item {
+  display: none;
+}
+
+.carousel__item_visible {
+  position: relative;
+  display: block;
+}
+
+.carousel__before {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 0;
+}
+
+.carousel__after {
+  position: relative;
+  z-index: 1;
+}
+
+.carousel__nav {
+  padding-top: 35px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel__buttons {
+  border: none;
+  background: none;
+  color: #c4c4c4;
+  position: relative;
+}
+
+.carousel__button-left {
+  padding-left: 65px;
+}
+
+.carousel__button-right {
+  padding-right: 65px;
+}
+
+.carousel__buttons:hover {
+  color: #ffffff;
+  transition: 300ms;
+}
+
+.carousel__buttons:active {
+  color: #d1a954;
+  transition: 300ms;
+}
+
+.carousel__arrows::before {
+  content: "";
+  display: block;
+  border-top: 2px solid #c4c4c4;
+  border-left: 2px solid #c4c4c4;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  position: absolute;
+  top: -7px;
+}
+
+.carousel__left-arrow::before {
+  left: 0;
+  transform: rotate(-45deg);
+}
+
+.carousel__right-arrow::before {
+  right: 0;
+  transform: rotate(135deg);
+}
+
+.carousel__arrows {
+  display: block;
+  border-top: 2px solid #c4c4c4;
+  width: 40px;
+  position: absolute;
+  top: 12px;
+}
+
+.carousel__left-arrow {
+  left: 0;
+}
+
+.carousel__right-arrow {
+  right: 0;
+}
+
+.carousel__buttons:hover .carousel__arrows,
+.carousel__buttons:hover .carousel__arrows::before {
+  border-color: #ffffff;
+  transition: 300ms;
+}
+
+.carousel__buttons:active .carousel__arrows,
+.carousel__buttons:active .carousel__arrows::before {
+  border-color: #d1a954;
+  transition: 300ms;
+}

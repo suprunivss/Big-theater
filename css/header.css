@@ -1,0 +1,47 @@
+.header {
+  position: fixed;
+  padding-top: 51px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 3;
+}
+
+.header__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navigation__list {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation__item:not(:last-child) {
+  list-style: none;
+  margin: 0 63px 0 0;
+}
+
+.navigation__link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.navigation__link:hover,
+.telephone__link:hover {
+  color: #d1a954;
+  transition: 300ms;
+}
+
+.navigation__link:active,
+.telephone__link:active {
+  color: #8f5613;
+}
+
+.header__tel {
+  text-decoration: none;
+  color: #ffffff;
+  border-bottom: 2px solid #d1a954;
+}
