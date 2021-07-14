@@ -1,0 +1,98 @@
+@import './variables.scss';
+
+
+.preview {
+  &__photos {
+    display: flex;
+    justify-content: center;
+
+    height: 550px;
+    margin-bottom: 150px;
+  }
+
+  &__items {
+    position: relative;
+
+    flex-basis: 33%;
+    flex-grow: 1;
+
+    max-width: 442px;
+
+    &:hover .preview__container {
+      visibility: hidden;
+
+      opacity: 0;
+    }
+
+    &:hover .preview__button {
+      transform: scale(1);
+    }
+  }
+
+  &__item-1 {
+    background: url(../assets/img/1.png) no-repeat;
+  }
+
+  &__item-2 {
+    background: url(../assets/img/2.png) no-repeat;
+  }
+
+  &__item-3 {
+    background: url(../assets/img/3.png) no-repeat;
+  }
+
+  &__container {
+    display: flex;
+    visibility: visible;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100%;
+    padding: 40px;
+
+    transition: 300ms;
+
+    opacity: 1;
+    background-color: $test;
+  }
+
+  &__date {
+    transform: rotate(-90deg) translateY(100%);
+    transform-origin: left bottom;
+  }
+
+  &__button {
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+
+    width: 100px;
+    height: 100px;
+
+    transition: 300ms;
+    transform: scale(0);
+
+    border: none;
+    background: url(../assets/img/search.svg) no-repeat;
+  }
+}
+.stars {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+
+  height: 550px;
+
+  background: url('../assets/img/5.png') no-repeat;
+
+  gap: 100px;
+
+  &__right {
+    max-width: 540px;
+  }
+
+  &__title {
+    margin-top: 25px;
+  }
+}
