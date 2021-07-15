@@ -1,0 +1,176 @@
+.theater {
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+
+  height: 100vh;
+  min-height: 680px;
+  padding-top: 76px;
+
+  background: url('../assets/img/header.png') no-repeat;
+
+  &__container {
+    display: flex;
+  }
+
+  &__description {
+    width: 538px;
+    margin: 0 125px 0 0;
+    padding-top: 120px;
+  }
+}
+
+.description {
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 160px;
+    height: 50px;
+    margin-top: 45px;
+
+    border: none;
+    background: #d1a954;
+
+    &:hover {
+      transition: 300ms;
+
+      background: #cd6326;
+    }
+
+    &:active {
+      transition: 300ms;
+
+      background: #8f5613;
+    }
+  }
+}
+
+.carousel {
+  &__preview {
+    width: 370px;
+    height: 510px;
+  }
+
+  &__item {
+    display: none;
+
+    &_visible {
+      position: relative;
+
+      display: block;
+    }
+  }
+
+  &__before {
+    position: absolute;
+    z-index: 0;
+    top: 20px;
+    left: 20px;
+  }
+
+  &__after {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 35px;
+  }
+
+  &__button-left {
+    padding-left: 65px;
+  }
+
+  &__buttons {
+    position: relative;
+
+    color: #c4c4c4;
+    border: none;
+    background: none;
+
+    &:hover {
+      transition: 300ms;
+
+      color: #ffffff;
+
+      .carousel__arrows,
+      .carousel__arrows::before {
+        transition: 300ms;
+
+        border-color: #ffffff;
+      }
+    }
+
+    &:active {
+      transition: 300ms;
+
+      color: #d1a954;
+
+      .carousel__arrows,
+      .carousel__arrows::before {
+        transition: 300ms;
+
+        border-color: #d1a954;
+      }
+    }
+  }
+
+  &__left-arrow {
+    left: 0;
+    &::before {
+      left: 0;
+
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__arrows {
+    position: absolute;
+    top: 12px;
+
+    display: block;
+
+    width: 40px;
+
+    border-top: 2px solid #c4c4c4;
+    &::before {
+      position: absolute;
+      top: -7px;
+
+      display: block;
+
+      width: 10px;
+      height: 10px;
+
+      content: '';
+
+      border-top: 2px solid #c4c4c4;
+      border-left: 2px solid #c4c4c4;
+      border-radius: 2px;
+    }
+  }
+
+  &__button-right {
+    padding-right: 65px;
+  }
+
+  &__right-arrow {
+    right: 0;
+
+    &::before {
+      right: 0;
+
+      transform: rotate(135deg);
+    }
+  }
+}
