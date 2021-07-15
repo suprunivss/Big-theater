@@ -28,7 +28,7 @@
       transform: scale(1);
     }
   }
-
+  
   &__item-1 {
     background: url(../assets/img/1.png) no-repeat;
   }
@@ -73,9 +73,10 @@
     transform: scale(0);
 
     border: none;
-    background: url(../assets/img/search.svg) no-repeat;
+    background: url('../assets/img/search.svg') no-repeat;
   }
 }
+
 .stars {
   display: flex;
   align-items: center;
