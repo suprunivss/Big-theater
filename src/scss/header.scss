@@ -6,17 +6,40 @@
   width: 100%;
   padding-top: 51px;
 
+  &__navigation {
+    @media (max-width: $XL) {
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: $L) {
+      display: none;
+    }
+  }
+
   &__container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    @media (max-width: $XL) {
+      align-items: center;
+      flex-direction: column;
+    }
+
+    @media (max-width: $L) {
+      flex-direction: row;
+    }
   }
 
   &__tel {
     text-decoration: none;
 
-    color: #ffffff;
-    border-bottom: 2px solid #d1a954;
+    color: $whiteColor;
+    border-bottom: 2px solid $yellowColor;
+  }
+
+  &__icon {
+    display: none ;
   }
 }
 
@@ -32,7 +55,7 @@
   &__link {
     text-decoration: none;
 
-    color: #ffffff;
+    color: $whiteColor;
   }
 
   &__item {
@@ -40,6 +63,14 @@
       margin: 0 63px 0 0;
 
       list-style: none;
+
+      @media (max-width: $XL) {
+        margin: 0 28px 0 0;
+      }
+
+      @media (max-width: $L) {
+        margin: 0 0 30px 0;
+      }
     }
   }
 }
@@ -50,11 +81,12 @@
     &:hover {
       transition: 300ms;
 
-      color: #d1a954;
+      color: $yellowColor;
     }
 
     &:active {
-      color: #8f5613;
+      color: $bourbonColor;
     }
   }
 }
+

@@ -10,40 +10,34 @@
       type="image/png"
     />
     <title>Большой театр</title>
-    <link rel="stylesheet" href="css/reset.min.css" />
-    <link rel="stylesheet" href="css/main.min.css" />
-    <link rel="stylesheet" href="css/header.min.css" />
-    <link rel="stylesheet" href="css/theater.min.css" />
-    <link rel="stylesheet" href="css/panel.min.css" />
-    <link rel="stylesheet" href="css/about.min.css" />
-    <link rel="stylesheet" href="css/preview.min.css" />
-    <link rel="stylesheet" href="css/partners.min.css" />
-    <link rel="stylesheet" href="css/footer.min.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
+
     <header class="header">
       <div class="header__container container">
-        <div class="header__left">
-          <nav class="header__navigation navigation fs18">
-            <ul class="navigation__list">
-              <li class="navigation__item">
-                <a class="navigation__link" href="#">главная</a>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link" href="#">о театре</a>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link" href="#">наши постановки</a>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link" href="#">партнеры театра</a>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link" href="#">контакты</a>
-              </li>
-            </ul>
-          </nav>
+        <div class="header__icon">
+          <button type="button" class="header__icon-menu"></button  >
         </div>
+        <nav class="header__navigation navigation fs18">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">главная</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">о театре</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">наши постановки</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">партнеры театра</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">контакты</a>
+            </li>
+          </ul>
+        </nav>
         <div class="header__right fs16">
           <a class="header__tel" href="tel:+74951234567">+7 495 123-45-67</a>
         </div>
@@ -222,9 +216,11 @@
       </section>
 
       <section class="preview pdt150">
-        <h2 class="title">
-          <span class="color__yellow">наши</span> постановки
-        </h2>
+        <div class="container">
+          <h2 class="title">
+            <span class="color__yellow">наши</span> постановки
+          </h2>
+        </div>
         <div class="preview__photos">
           <div class="preview__items preview__item-1">
             <div class="preview__container">
@@ -255,17 +251,19 @@
           </div>
         </div>
 
-        <div class="stars container">
-          <div class="stars__left">
-            <h3 class="fs72 color__yellow">2018</h3>
-            <h3 class="fs72 color__yellow">2019</h3>
-            <h3 class="fs72 color__yellow">2020</h3>
-          </div>
-          <div class="stars__right">
-            <img src="assets/img/stars.svg" alt="Звезды" />
-            <h3 class="stars__title fs36">
-              Лучший театр по&nbsp;мнению&nbsp;театральных критиков Парижа
-            </h3>
+        <div class="stars">
+          <div class="stars__container container">
+            <div class="stars__left">
+              <h3 class="fs72 color__yellow">2018</h3>
+              <h3 class="fs72 color__yellow">2019</h3>
+              <h3 class="fs72 color__yellow">2020</h3>
+            </div>
+            <div class="stars__right">
+              <img src="assets/img/stars.svg" alt="Звезды" />
+              <h3 class="stars__title fs36">
+                Лучший театр по&nbsp;мнению&nbsp;театральных критиков Парижа
+              </h3>
+            </div>
           </div>
         </div>
       </section>
@@ -296,12 +294,12 @@
         </h2>
         <div class="footer__wrapper">
           <div class="footer__contact-items">
-            <p class="contact-item fs16">+7 (812) 123-45-55</p>
-            <p class="contact-item fs16">+7 (812) 123-45-66</p>
-            <p class="contact-item fs16">info@theater.ru</p>
-            <p class="contact-item fs16">г. санкт-петербург, невский 140</p>
+            <p class="contact-item contact-item-1 fs16">+7 (812) 123-45-55</p>
+            <p class="contact-item contact-item-2 fs16">+7 (812) 123-45-66</p>
+            <p class="contact-item contact-item-3 fs16">info@theater.ru</p>
+            <p class="contact-item contact-item-4 fs16">г. санкт-петербург, невский 140</p>
           </div>
-          <div>
+          <div class="footer__form-wrapper">
             <form class="footer__form form">
               <div class="form__left">
                 <input

@@ -1,11 +1,35 @@
 .footer {
+  @media (max-width: $XL) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
 
-    padding-bottom: 80px;
+    margin-bottom: 80px;
 
-    border-bottom: 1px solid #565656;
+
+    @media (max-width: $XL) {
+      flex-direction: column-reverse;
+      justify-content: center;
+
+      margin-bottom: 0;
+      padding-bottom: 40px;
+    }
+  }
+
+  &__contact-items {
+    @media (max-width: $XL) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      margin-top: 80px;
+      padding-bottom: 40px;
+    }
   }
 
   &__form {
@@ -34,7 +58,19 @@
     height: 50px;
 
     border: none;
-    background: #d1a954;
+    background-color: $yellowColor;
+
+    &:hover {
+      transition: 300ms;
+
+      background-color: $orangeColor;
+    }
+
+    &:active {
+      transition: 300ms;
+
+      background-color: $bourbonColor;
+    }
   }
 
   &__copyright {
@@ -42,10 +78,38 @@
     justify-content: space-between;
 
     padding: 30px 0;
+
+    border-top: 1px solid $matterhornColor;
   }
 }
 
 .contact-item {
+  flex-basis: 50%;
+
+  &-1 {
+    order: 1;
+  }
+
+  &-2 {
+    order: 3;
+  }
+
+  &-3 {
+    order: 2;
+
+    @media (max-width: $XL) {
+      text-align: end;
+    }
+  }
+
+  &-4 {
+    order: 4;
+
+    @media (max-width: $XL) {
+      text-align: end;
+    }
+  }
+
   &:not(:last-child) {
     margin-bottom: 25px;
   }
@@ -69,9 +133,9 @@
     height: 35px;
     padding-left: 15px;
 
-    color: white;
-    border: 1px solid #616161;
-    background: #444444;
+    color: $whiteColor;
+    border: 1px solid $grayColor;
+    background-color: $goshawkColor;
   }
 
   &__textarea {
@@ -79,8 +143,12 @@
     height: 100px;
     padding: 7px 0 0 15px;
 
-    color: white;
-    border: 1px solid #616161;
-    background: #444444;
+    color: $whiteColor;
+    border: 1px solid $grayColor;
+    background-color: $goshawkColor;
+
+    @media (max-width: $XL) {
+      width: 270px;
+    }
   }
 }

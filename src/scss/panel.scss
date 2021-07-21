@@ -13,7 +13,7 @@
   height: 100vh;
   padding: 0 0 85px 0;
 
-  background: rgba(51, 51, 51, .75);
+  background-color: $blackGhostColor;
 
   &__contact {
     width: max-content;
@@ -35,8 +35,12 @@
 
       content: '';
 
-      border-top: 3px solid #c4c4c4;
+      border-top: 3px solid $silverColor;
     }
+  }
+
+  @media (max-width: $L) {
+    display: none;
   }
 }
 
@@ -48,18 +52,18 @@
   &__btn {
     display: inline-block;
 
-    fill: rgba(255, 255, 255, .6);
+    fill: $grayGhostColor;
 
     &:hover {
       transition: 300ms;
 
-      fill: #d1a954;
+      fill: $yellowColor;
     }
 
     &:active {
       transition: 300ms;
 
-      fill: #8f5613;
+      fill: $bourbonColor;
     }
   }
 }

@@ -66,13 +66,25 @@ body {
 
   text-transform: uppercase;
 
-  color: #ffffff;
-  background-color: #333333;
+  color: $whiteColor;
+  background-color: $mainColor;
 }
 
 .container {
   width: 1110px;
   margin: 0 auto;
+
+  @media (max-width: $XL) {
+    width: 690px;
+  }
+
+  @media (max-width: $L) {
+    width: 690px;
+  }
+
+  @media (max-width: $M) {
+    width: 510px;
+  }
 }
 
 .fs12 {
@@ -92,7 +104,7 @@ body {
 
   text-transform: none;
 
-  color: #989898;
+  color: $spanishColor;
 }
 
 .fs14 {
@@ -136,7 +148,7 @@ body {
   letter-spacing: .1em;
   text-transform: uppercase;
 
-  color: #ffffff;
+  color: $whiteColor;
 }
 
 .fs21 {
@@ -171,7 +183,7 @@ body {
 
 .title,
 .fs48 {
-  padding: 0 0 100px 0;
+  margin: 0 0 100px 0;
 
   font-size: 48px;
   font-weight: 300;
@@ -192,7 +204,7 @@ body {
 }
 
 .color__yellow {
-  color: #d1a954;
+  color: $yellowColor;
 }
 
 h1 {
@@ -203,5 +215,5 @@ h1 {
 }
 
 .pdt150 {
-  padding-top: 150px;
+  margin-top: 150px;
 }
