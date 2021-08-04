@@ -1,22 +1,18 @@
-@import './variables.scss';
-
-
 .preview {
   &__photos {
     display: flex;
     justify-content: center;
 
     height: 550px;
-    margin-bottom: 150px;
+    margin: 0 0 150px 150px;
   }
 
   &__items {
     position: relative;
 
-    flex-basis: 33%;
-    flex-grow: 1;
-
     max-width: 442px;
+
+    flex: 1 0 auto;
 
     &:hover .preview__container {
       visibility: hidden;
@@ -28,17 +24,11 @@
       transform: scale(1);
     }
   }
-  
-  &__item-1 {
-    background: url(../assets/img/1.png) no-repeat;
-  }
 
-  &__item-2 {
-    background: url(../assets/img/2.png) no-repeat;
-  }
-
-  &__item-3 {
-    background: url(../assets/img/3.png) no-repeat;
+  @each $number in 1, 2, 3 {
+    &__item-#{$number} {
+      background-image: url('../assets/img/#{$number}.png');
+    }
   }
 
   &__container {
@@ -53,7 +43,7 @@
     transition: 300ms;
 
     opacity: 1;
-    background-color: $test;
+    background-color: $blackTransparentColor;
   }
 
   &__date {
@@ -79,15 +69,34 @@
 
 .stars {
   display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: center;
 
   height: 550px;
 
-  background: url('../assets/img/5.png') no-repeat;
+  background: none;
 
-  gap: 100px;
+  @media (max-width: $XL) {
+    background: url('../assets/img/5.png') center no-repeat;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+
+    background: url('../assets/img/5.png') center no-repeat;
+
+    gap: 100px;
+
+
+    @media (max-width: $XL) {
+      justify-content: flex-start;
+
+      background: none;
+
+      gap: 60px;
+    }
+  }
 
   &__right {
     max-width: 540px;

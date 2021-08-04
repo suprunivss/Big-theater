@@ -1,6 +1,7 @@
 .about-theater {
   &__wrapper {
     display: flex;
+    justify-content: center;
 
     gap: 30px;
   }
@@ -11,6 +12,13 @@
 
   &__seating {
     width: 255px;
+  }
+
+  &__img-wrapper {
+    @media (max-width: $XL) {
+      display: none;
+      visibility: hidden;
+    }
   }
 }
 
