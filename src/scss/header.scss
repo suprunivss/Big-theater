@@ -6,6 +6,91 @@
   width: 100%;
   padding-top: 51px;
 
+  
+  &__icon {
+    display: none ;
+
+    @media (max-width: $L) {
+      display: block;
+    }
+  }
+
+  &__icon-menu {
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    position: relative;
+
+    &_active {
+      bottom: 20px;
+      left: 200px;
+    }
+  } 
+
+  &__icon-burger {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 4px;
+    background-color: $whiteColor;
+    top: 20px;
+    left: 0;
+    transition: 300ms;
+    
+    &::before {
+      position: absolute;
+      content: "";
+      height: 4px;
+      background-color: $whiteColor;
+      width: 26px;
+      bottom: 10px;
+      left: 0;
+      transition: 300ms;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 13px;
+      height: 4px;
+      background-color: $whiteColor;
+      bottom: 10px;
+      left: 0;
+      top: 10px;
+      transition: 300ms;
+    }
+  }
+
+
+  &__icon:hover  &__icon-burger {
+    width: 35px;
+
+    &::after {
+      width: 35px;
+    }
+
+    &::before {
+      width: 35px;
+    }
+  }
+
+  &__icon-menu_active &__icon-burger {
+    height: 0;
+    transition: 300ms;
+
+    &::before {
+      top: 10px;
+      transform: rotate(45deg);
+      width: 35px;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+      width: 35px;
+    }
+  }
+
   &__navigation {
     @media (max-width: $XL) {
       margin-bottom: 50px;
@@ -37,10 +122,6 @@
     color: $whiteColor;
     border-bottom: 2px solid $yellowColor;
   }
-
-  &__icon {
-    display: none ;
-  }
 }
 
 .navigation {
@@ -56,6 +137,16 @@
     text-decoration: none;
 
     color: $whiteColor;
+
+    &:hover {
+      transition: 300ms;
+
+      color: $yellowColor;
+    }
+
+    &:active {
+      color: $bourbonColor;
+    }
   }
 
   &__item {
@@ -74,19 +165,3 @@
     }
   }
 }
-
-.navigation,
-.telephone {
-  &__link {
-    &:hover {
-      transition: 300ms;
-
-      color: $yellowColor;
-    }
-
-    &:active {
-      color: $bourbonColor;
-    }
-  }
-}
-
