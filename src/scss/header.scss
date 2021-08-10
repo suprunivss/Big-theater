@@ -14,7 +14,7 @@
     }
   }
 
-  &__button {
+  &__burger-btn {
     background: none;
     border: none;
     width: 40px;
@@ -61,7 +61,7 @@
   }
 
 
-  &__button:hover  &__icon {
+  &__burger-btn:hover  &__icon {
     width: 35px;
 
     &::after {

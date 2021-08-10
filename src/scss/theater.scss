@@ -15,7 +15,7 @@
     display: flex;
     
     @media (max-width: $L) {
-     justify-content: center; 
+      justify-content: center; 
     }
   }
 
@@ -36,16 +36,8 @@
 }
 
 .description {
-  @media (max-width: $L) {
-
-  }
-
   &__title {
     margin-bottom: 30px;
-
-    @media (max-width: $L) {
-
-    }
   }
 
   &__button {
