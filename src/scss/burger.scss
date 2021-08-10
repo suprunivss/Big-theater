@@ -1,24 +1,59 @@
 .burger {
     &__menu {
         display: none;
+        position: relative;
 
         @media (max-width: $L) {
-        position: fixed;
-        width: 300px;
-        height: 800px;
-        background-color: $mainColor;
-        transition: 300ms;
-        left: -350px;
+            position: fixed;
+            width: 300px;
+            height: 100vh;
+            background-color: $mainColor;
+            left: -350px;
 
-        &_active {
-            display: block;
-            left: 0;
+            &_active {
+                display: block;
+                left: 0;
+                transition: 300ms;
+            }
         }
+    }
+    &__button {
+        background: none;
+        border: none;
+        width: 32px;
+        height: 32px;
+        position: relative;
+    
+        &-wrapper {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        background-color: $whiteColor;
+        transform: rotate(45deg);
+        top: 13px;
+        left: 2px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 3px;
+            background-color: $whiteColor;
+            transform: rotate(-90deg);
+            left: 0;
         }
     }
 
     &__navigation {
-        margin: 140px 0 90px 40px;
+        padding: 140px 40px 0 40px;
+        margin-bottom: 90px;
     }
 
     &__item:not(:last-child) {
@@ -32,16 +67,6 @@
         font-size: 24px;
         line-height: 33px;
         letter-spacing: 0.05em;
-
-        &:hover {
-            transition: 300ms;
-      
-            color: $yellowColor;
-          }
-      
-          &:active {
-            color: $bourbonColor;
-          }
     }
 
     &__social {
@@ -51,29 +76,16 @@
 
     &__items {
         &-wrapper {
-        display: flex;
-        flex-direction: row-reverse;
-        gap: 50px;
-        flex-wrap: wrap;
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 50px;
+            flex-wrap: wrap;
         }
     }
-    
+
     &__btn {
         display: inline-block;
-    
+
         fill: $whiteColor;
-      
-        &:hover {
-          transition: 300ms;
-    
-          fill: $yellowColor;
-        }
-    
-        &:active {
-          transition: 300ms;
-    
-          fill: $bourbonColor;
-        }
     }
 }
-

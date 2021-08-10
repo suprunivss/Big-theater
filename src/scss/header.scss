@@ -1,13 +1,12 @@
 .header {
   position: fixed;
-  z-index: 2;
 
   box-sizing: border-box;
   width: 100%;
   padding-top: 51px;
 
   
-  &__icon {
+  &__button-wrapper {
     display: none ;
 
     @media (max-width: $L) {
@@ -15,7 +14,7 @@
     }
   }
 
-  &__icon-menu {
+  &__button {
     background: none;
     border: none;
     width: 40px;
@@ -23,12 +22,11 @@
     position: relative;
 
     &_active {
-      bottom: 20px;
-      left: 200px;
+      display: none;
     }
   } 
 
-  &__icon-burger {
+  &__icon {
     position: absolute;
     content: "";
     width: 20px;
@@ -63,7 +61,7 @@
   }
 
 
-  &__icon:hover  &__icon-burger {
+  &__button:hover  &__icon {
     width: 35px;
 
     &::after {
@@ -71,22 +69,6 @@
     }
 
     &::before {
-      width: 35px;
-    }
-  }
-
-  &__icon-menu_active &__icon-burger {
-    height: 0;
-    transition: 300ms;
-
-    &::before {
-      top: 10px;
-      transform: rotate(45deg);
-      width: 35px;
-    }
-
-    &::after {
-      transform: rotate(-45deg);
       width: 35px;
     }
   }

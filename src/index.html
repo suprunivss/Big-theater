@@ -16,8 +16,8 @@
 
     <header class="header">
       <div class="header__container container">
-        <div class="header__icon">
-          <button type="button" class="header__icon-menu"><span class="header__icon-burger"></span></button  >
+        <div class="header__button-wrapper">
+          <button type="button" class="header__button"><span class="header__icon"></span></button  >
         </div>
         <nav class="header__navigation navigation fs18">
           <ul class="navigation__list">
@@ -46,6 +46,10 @@
 
     
     <aside class="burger__menu">
+
+      <div class="burger__button-wrapper">
+        <button type="button" class="burger__button"><span class="burger__icon"></span></button  >
+      </div>
       <nav class="burger__navigation navigation fs18">
         <ul class="burger__list">
           <li class="burger__item">
@@ -433,15 +437,5 @@
       </div>
     </footer>
   </body>
-  <script>
-    const iconMenu = document.querySelector('.header__icon-menu');
-    const burgerMenu = document.querySelector('.burger__menu');
-    if (iconMenu) {
-      iconMenu.addEventListener("click", function (e) {
-        iconMenu.classList.toggle('header__icon-menu_active');
-        burgerMenu.classList.toggle('burger__menu_active');
-	});
-  
-}
-  </script>
+  <script src="js/index.min.js"></script>
 </html>
