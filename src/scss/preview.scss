@@ -94,11 +94,15 @@
 
 
     @media (max-width: $XL) {
-      justify-content: flex-start;
+      justify-content: center;
 
       background: none;
 
       gap: 60px;
+
+      @media (max-width: $L) {
+        gap: 10px;
+      }
     }
   }
 
@@ -108,5 +112,9 @@
 
   &__title {
     margin-top: 25px;
+
+    @media (max-width: $M) {
+      font-size: 25px;
+    }
   }
 }

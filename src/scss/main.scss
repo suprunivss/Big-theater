@@ -85,6 +85,7 @@ body {
 
   @media (max-width: $M) {
     width: 510px;
+    padding: 0;
   }
 }
 
@@ -192,6 +193,10 @@ body {
 
   text-align: center;
   letter-spacing: .1em;
+
+  @media (max-width: $M) {
+    margin: 0 0 60px 0;
+  }
 }
 
 .fs72 {

@@ -5,9 +5,8 @@
   width: 100%;
   padding-top: 51px;
 
-  
   &__button-wrapper {
-    display: none ;
+    display: none;
 
     @media (max-width: $L) {
       display: block;
@@ -15,48 +14,55 @@
   }
 
   &__burger-btn {
-    background: none;
-    border: none;
-    width: 40px;
-    height: 40px;
     position: relative;
 
-    &_active {
-      display: none;
-    }
-  } 
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    background: none;
+  }
 
   &__icon {
     position: absolute;
-    content: "";
-    width: 20px;
-    height: 4px;
-    background-color: $whiteColor;
     top: 20px;
     left: 0;
+
+    width: 20px;
+    height: 4px;
+
+    content: '';
     transition: 300ms;
-    
+
+    background-color: $whiteColor;
+
     &::before {
       position: absolute;
-      content: "";
-      height: 4px;
-      background-color: $whiteColor;
-      width: 26px;
       bottom: 10px;
       left: 0;
+
+      width: 26px;
+      height: 4px;
+
+      content: '';
       transition: 300ms;
+
+      background-color: $whiteColor;
     }
 
     &::after {
       position: absolute;
-      content: "";
-      width: 13px;
-      height: 4px;
-      background-color: $whiteColor;
+      top: 10px;
       bottom: 10px;
       left: 0;
-      top: 10px;
+
+      width: 13px;
+      height: 4px;
+
+      content: '';
       transition: 300ms;
+
+      background-color: $whiteColor;
     }
   }
 
@@ -95,6 +101,11 @@
 
     @media (max-width: $L) {
       flex-direction: row;
+    }
+
+    @media (max-width: $M) {
+      width: 100%;
+      padding: 0 40px;
     }
   }
 
