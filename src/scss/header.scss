@@ -1,10 +1,77 @@
 .header {
   position: fixed;
-  z-index: 2;
 
   box-sizing: border-box;
   width: 100%;
   padding-top: 51px;
+
+  
+  &__button-wrapper {
+    display: none ;
+
+    @media (max-width: $L) {
+      display: block;
+    }
+  }
+
+  &__burger-btn {
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    position: relative;
+
+    &_active {
+      display: none;
+    }
+  } 
+
+  &__icon {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 4px;
+    background-color: $whiteColor;
+    top: 20px;
+    left: 0;
+    transition: 300ms;
+    
+    &::before {
+      position: absolute;
+      content: "";
+      height: 4px;
+      background-color: $whiteColor;
+      width: 26px;
+      bottom: 10px;
+      left: 0;
+      transition: 300ms;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 13px;
+      height: 4px;
+      background-color: $whiteColor;
+      bottom: 10px;
+      left: 0;
+      top: 10px;
+      transition: 300ms;
+    }
+  }
+
+
+  &__burger-btn:hover  &__icon {
+    width: 35px;
+
+    &::after {
+      width: 35px;
+    }
+
+    &::before {
+      width: 35px;
+    }
+  }
 
   &__navigation {
     @media (max-width: $XL) {
@@ -37,10 +104,6 @@
     color: $whiteColor;
     border-bottom: 2px solid $yellowColor;
   }
-
-  &__icon {
-    display: none ;
-  }
 }
 
 .navigation {
@@ -56,6 +119,16 @@
     text-decoration: none;
 
     color: $whiteColor;
+
+    &:hover {
+      transition: 300ms;
+
+      color: $yellowColor;
+    }
+
+    &:active {
+      color: $bourbonColor;
+    }
   }
 
   &__item {
@@ -74,19 +147,3 @@
     }
   }
 }
-
-.navigation,
-.telephone {
-  &__link {
-    &:hover {
-      transition: 300ms;
-
-      color: $yellowColor;
-    }
-
-    &:active {
-      color: $bourbonColor;
-    }
-  }
-}
-

@@ -5,6 +5,10 @@
 
     height: 550px;
     margin: 0 0 150px 150px;
+
+    @media (max-width: $L) {
+      display: none;
+    }
   }
 
   &__items {

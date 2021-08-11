@@ -5,6 +5,11 @@
     flex-direction: column;
   }
 
+  @media (max-width: $L) {
+   width: 770px;
+   margin: 90px auto 0;   
+  }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;

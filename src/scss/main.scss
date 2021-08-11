@@ -79,7 +79,8 @@ body {
   }
 
   @media (max-width: $L) {
-    width: 690px;
+    width: 100%;
+    padding: 0 40px;
   }
 
   @media (max-width: $M) {
@@ -216,4 +217,8 @@ h1 {
 
 .pdt150 {
   margin-top: 150px;
+
+  @media (max-width: $L) {
+   margin-top: 90px;   
+  }
 }

@@ -13,6 +13,10 @@
 
   &__container {
     display: flex;
+    
+    @media (max-width: $L) {
+      justify-content: center; 
+    }
   }
 
   &__description {
@@ -20,7 +24,12 @@
     margin: 0 125px 0 0;
     padding-top: 120px;
 
-    @media (max-width: $M) {
+    @media (max-width: $XL) {
+      margin: 0;
+      padding: 0;
+    }
+
+    @media (max-width: $L) {
       justify-content: center;
     }
   }
