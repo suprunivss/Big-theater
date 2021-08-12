@@ -1,17 +1,35 @@
 .about-theater {
+  &__container {
+    @media (max-width: $M) {
+      padding: 0;
+    }
+  }
+
   &__wrapper {
     display: flex;
     justify-content: center;
 
     gap: 30px;
+
+    @media (max-width: $M) {
+      flex-direction: column;
+    }
   }
 
   &__information {
     max-width: 445px;
+
+    @media (max-width: $M) {
+      max-width: 510px;
+    }
   }
 
   &__seating {
     width: 255px;
+
+    @media (max-width: $M) {
+      width: 510px;
+    }
   }
 
   &__img-wrapper {
@@ -23,6 +41,10 @@
 }
 
 .information {
+  @media (max-width: $M) {
+    text-align: center;
+  }
+
   &__title {
     margin: 0 0 40px 0;
   }
@@ -31,6 +53,7 @@
 .seating {
   &__title {
     margin: 0 0 40px 0;
+    text-align: center;
   }
 
   &__bottom {
@@ -38,6 +61,11 @@
     flex-direction: column;
 
     gap: 15px;
+
+    @media (max-width: $M) {
+      flex-direction: row;
+      justify-content: space-around;
+    }
   }
 
   &__description {
