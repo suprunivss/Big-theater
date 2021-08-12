@@ -103,11 +103,23 @@
       @media (max-width: $L) {
         gap: 10px;
       }
+
+      @media (max-width: $S) {
+        flex-direction: column-reverse;
+      }
     }
   }
 
   &__right {
     max-width: 540px;
+
+    @media (max-width: $S) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-bottom: 40px;
+    }
   }
 
   &__title {
