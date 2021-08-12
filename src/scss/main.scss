@@ -87,6 +87,10 @@ body {
     width: 510px;
     padding: 0;
   }
+
+  @media (max-width: $S) {
+    width: 375px;
+  }
 }
 
 .fs12 {
