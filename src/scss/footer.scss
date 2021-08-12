@@ -189,6 +189,30 @@
     @media (max-width: $S) {
       width: 320px;
     }
+
+    &-1 {
+      @media (max-width: $S) {
+        order: 1;
+      }
+    }
+
+    &-2 {
+      @media (max-width: $S) {
+        order: 4;
+      }
+    }
+
+    &-3 {
+      @media (max-width: $S) {
+        order: 2;
+      }
+    }
+
+    &-4 {
+      @media (max-width: $S) {
+        order: 3;
+      }
+    }
   }
 
   &__textarea {
