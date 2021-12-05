@@ -85,15 +85,18 @@
   &__preview {
     width: 370px;
     height: 510px;
+    position: relative;
   }
 
   &__item {
-    display: none;
+    position: absolute;
+    opacity: 0;
+    transition: 500ms;
 
     &_visible {
-      position: relative;
-
-      display: block;
+      top: 0;
+      left: 0;
+      opacity: 1;
     }
   }
 
