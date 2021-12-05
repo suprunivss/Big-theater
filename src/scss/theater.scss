@@ -88,12 +88,13 @@
   }
 
   &__item {
-    display: none;
+    opacity: 0;
+    transition: 500ms;
 
     &_visible {
       position: relative;
 
-      display: block;
+      opacity: 1;
     }
   }
 
