@@ -1,44 +1,14 @@
-const switchImg = document.querySelector('.carousel__nav');
-const switchImgLeft = switchImg.querySelector('.carousel__button-left');
-const switchImgRight = switchImg.querySelector('.carousel__button-right');
+const navigationWrapper = document.querySelector('.js__carousel');
+const sliders = document.querySelector('.carousel__preview');
 
+navigationWrapper.addEventListener('click', (event) => {
+    const sliderVisible = sliders.querySelector('.carousel__item_visible');
 
-switchImg.addEventListener('click', (e) => {
-    if(e.target === switchImgLeft) {
-        previousSlide();
-    } else if(e.target === switchImgRight) {
-        nextSlide();
+    sliderVisible.classList.remove('carousel__item_visible');
+
+    if (event.target.closest('.js__carousel-left')) {
+        (sliderVisible.previousElementSibling || sliders.lastElementChild).classList.add('carousel__item_visible');
+    } else if (event.target.closest('.js__carousel-right')) {
+        (sliderVisible.nextElementSibling || sliders.firstElementChild).classList.add('carousel__item_visible');
     }
 })
-
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function nextSlide() {
-    showSlides(slideIndex += 1);
-}
-
-function previousSlide() {
-    showSlides(slideIndex -= 1);  
-}
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-    let slides = document.querySelectorAll(".carousel__item");
-    
-    if (n > slides.length) {
-        slideIndex = 1
-    }
-    if (n < 1) {
-        slideIndex = slides.length
-    }
-
-    for (let slide of slides) {
-        slide.style.opacity = 0;
-    }
-
-    slides[slideIndex - 1].style.opacity = 1;
-}
