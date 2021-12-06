@@ -1,14 +1,15 @@
-const navigationWrapper = document.querySelector('.js-carousel');
-const sliders = document.querySelector('.carousel__preview');
+const navigationWrapper = document.querySelector('.js-carousel-navigation');
+const sliders = document.querySelector('.js-carousel-preview');
+const visibleClassName = 'carousel__item_visible';
 
 navigationWrapper.addEventListener('click', (event) => {
-    const sliderVisible = sliders.querySelector('.carousel__item_visible');
+    const sliderVisible = sliders.querySelector(`.${visibleClassName}`);
 
-    sliderVisible.classList.remove('carousel__item_visible');
+    sliderVisible.classList.remove(visibleClassName);
 
-    if (event.target.closest('.js-carousel-left')) {
-        (sliderVisible.previousElementSibling || sliders.lastElementChild).classList.add('carousel__item_visible');
-    } else if (event.target.closest('.js-carousel-right')) {
-        (sliderVisible.nextElementSibling || sliders.firstElementChild).classList.add('carousel__item_visible');
+    if (event.target.closest('.js-carousel-nav-left')) {
+        (sliderVisible.previousElementSibling || sliders.lastElementChild).classList.add(visibleClassName);
+    } else if (event.target.closest('.js-carousel-nav-right')) {
+        (sliderVisible.nextElementSibling || sliders.firstElementChild).classList.add(visibleClassName);
     }
 })

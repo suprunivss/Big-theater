@@ -91,11 +91,11 @@
   &__item {
     position: absolute;
     opacity: 0;
+    top: 0;
+    left: 0;
     transition: 500ms;
 
     &_visible {
-      top: 0;
-      left: 0;
       opacity: 1;
     }
   }
