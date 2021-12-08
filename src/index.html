@@ -135,7 +135,7 @@
             в Санкт&#8209;Петербурге, крупнейшее в России и одно из крупнейших
             театральных зданий в Европе XVIII.
           </p>
-          <button class="description__button fs18">Афиша</button>
+          <button class="description__button js-button-afisha fs18">Афиша</button>
         </div>
         <div class="theater__carousel carousel fs18">
           <div class="carousel__preview js-carousel-preview">
@@ -311,14 +311,14 @@
             <span class="color__yellow">наши</span> постановки
           </h2>
         </div>
-        <div class="preview__photos">
+        <div class="preview__photos js-preview-photos">
           <div class="preview__items preview__item-1">
             <div class="preview__container">
               <h3 class="preview__title fs24">ОСКАР 2020</h3>
               <h3 class="preview__date fs18">сентябрь 2020</h3>
             </div>
             <div>
-              <button type="button" class="preview__button"></button>
+              <button type="button" class="preview__button js-preview-button"></button>
             </div>
           </div>
           <div class="preview__items preview__item-2">
@@ -327,7 +327,7 @@
               <h3 class="preview__date fs18">июль 2020</h3>
             </div>
             <div>
-              <button class="preview__button"></button>
+              <button class="preview__button js-preview-button"></button>
             </div>
           </div>
           <div class="preview__items preview__item-3">
@@ -336,7 +336,7 @@
               <h3 class="preview__date fs18">май 2020</h3>
             </div>
             <div>
-              <button class="preview__button"></button>
+              <button class="preview__button js-preview-button"></button>
             </div>
           </div>
         </div>
@@ -443,5 +443,19 @@
         </div>
       </div>
     </footer>
+
+    <div class="popup-background js-popup-background"></div>
+    <section id="popup" class="popup js-popup">
+      <div class="popup__wrapper js-popup-wrapper">
+        <button type="button" class="popup__close-button js-popup-close-button">
+          <span class="popup__close-button-icon"></span>
+        </button>
+        <div class="popup__content">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eum omnis, tenetur, iste rerum laboriosam earum perferendis pariatur officia incidunt nihil illo molestiae accusantium deleniti necessitatibus placeat vitae temporibus saepe.
+          </p>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

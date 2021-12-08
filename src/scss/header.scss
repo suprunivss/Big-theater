@@ -1,6 +1,6 @@
 .header {
   position: fixed;
-  z-index: 10;
+  z-index: 2;
   box-sizing: border-box;
   width: 100%;
   padding-top: 51px;
@@ -31,7 +31,7 @@
     width: 20px;
     height: 4px;
 
-    content: '';
+    content: "";
     transition: 300ms;
 
     background-color: $whiteColor;
@@ -44,7 +44,7 @@
       width: 26px;
       height: 4px;
 
-      content: '';
+      content: "";
       transition: 300ms;
 
       background-color: $whiteColor;
@@ -59,15 +59,14 @@
       width: 13px;
       height: 4px;
 
-      content: '';
+      content: "";
       transition: 300ms;
 
       background-color: $whiteColor;
     }
   }
 
-
-  &__burger-btn:hover  &__icon {
+  &__burger-btn:hover &__icon {
     width: 35px;
 
     &::after {
