@@ -70,6 +70,10 @@ body {
   background-color: $mainColor;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .container {
   width: 1110px;
   margin: 0 auto;
@@ -228,6 +232,6 @@ h1 {
   margin-top: 150px;
 
   @media (max-width: $L) {
-   margin-top: 90px;   
+    margin-top: 90px;   
   }
 }
