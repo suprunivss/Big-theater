@@ -7,7 +7,7 @@
 
   @media (max-width: $L) {
     width: 770px;
-    margin: 90px auto 0;   
+    margin: 90px auto 0;
   }
 
   @media (max-width: $M) {
@@ -149,7 +149,7 @@
 
 .form {
   display: flex;
-  
+
   &__left {
     display: flex;
     flex-direction: row;
@@ -226,7 +226,6 @@
       font-size: 12px;
       height: 30px;
       text-transform: none;
-      letter-spacing: 1.1;
       position: absolute;
     }
   }

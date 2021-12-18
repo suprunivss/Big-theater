@@ -1,7 +1,4 @@
-import { validateText } from './utils/validate-text';
-import { validateLength } from './utils/validate-length';
-import { validateEmail } from './utils/validate-email';
-import { validatePhone } from './utils/validate-phone';
+import { validateText, validateLength, validateEmail, validatePhone } from './utils/index';
 import { requireError } from './constant';
 
 const formElement = document.querySelector('.js-form');
@@ -28,7 +25,7 @@ function validate(target) {
 
         case 'message':
             return [validateLength(250, target.value)].filter(Boolean)
-        
+
     }
 }
 
@@ -58,14 +55,14 @@ function validateForm(target) {
 }
 
 formInputElements.forEach(el => {
-    el.addEventListener('blur', ({target}) => {
+    el.addEventListener('blur', ({ target }) => {
         validateForm(target);
 
-        target.dataset.touch = "true";
+        target.dataset.touch = 'true';
     })
 })
 
-formElement.addEventListener('input', ({target}) => {
+formElement.addEventListener('input', ({ target }) => {
     if (target.dataset.touch === 'true') {
         validateForm(target);
     }
