@@ -4,6 +4,23 @@
   box-sizing: border-box;
   width: 100%;
   padding-top: 51px;
+  transition: 300ms;
+
+  &__scroll {
+    background: $glassEffectColor;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    backdrop-filter: blur(15px);
+
+    @media (max-width: $XL) {
+      background: none;
+      backdrop-filter: none;
+      border: none;
+      padding-top: 51px;
+      padding-bottom: 0;
+      transition: 0ms;
+    }
+  }
 
   &__button-wrapper {
     display: none;
