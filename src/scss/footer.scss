@@ -7,7 +7,7 @@
 
   @media (max-width: $L) {
     width: 770px;
-    margin: 90px auto 0;   
+    margin: 90px auto 0;
   }
 
   @media (max-width: $M) {
@@ -149,7 +149,7 @@
 
 .form {
   display: flex;
-  
+
   &__left {
     display: flex;
     flex-direction: row;
@@ -181,6 +181,11 @@
     color: $whiteColor;
     border: 1px solid $grayColor;
     background-color: $goshawkColor;
+
+    &:disabled {
+      background: $grayColor;
+      color: $matterhornColor;
+    }
 
     @media (max-width: $M) {
       width: 230px;

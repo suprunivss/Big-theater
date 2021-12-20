@@ -43,7 +43,7 @@
       </div>
     </header>
 
-    
+
     <aside class="mobile-menu">
       <div class="mobile-menu__button-wrapper">
         <button type="button" class="mobile-menu__button"><span class="mobile-menu__icon"></span></button>
@@ -390,46 +390,74 @@
             <p class="contact-item contact-item-4 fs16">г. санкт-петербург, невский 140</p>
           </div>
           <div class="footer__form-wrapper">
-            <form class="footer__form form">
+            <form id="form" class="footer__form form js-form">
               <div class="form__left">
-                <input
-                  class="form__item form__item-1 fs12"
-                  placeholder="Имя"
-                  required
-                  type="text"
-                />
-                <input
-                  class="form__item form__item-2 fs12"
-                  placeholder="Компания"
-                  type="text"
-                />
-                <input
-                  class="form__item form__item-3 fs12"
-                  placeholder="Телефон"
-                  type="tel"
-                />
-                <input
-                  class="form__item form__item-4 fs12"
-                  placeholder="E-mail"
-                  type="email"
-                />
+                <div class="form__item-wrapper">
+                  <input
+                    class="form__item form__item-1 js-form-input fs12"
+                    placeholder="Имя"
+                    data-touch="false"
+                    data-name="name"
+                    required
+                    type="text"
+                  />
+                  <p class="form__error"></p>
+                </div>
+                <div class="form__item-wrapper">
+                  <input
+                    class="form__item form__item-2 js-form-input fs12"
+                    placeholder="Компания"
+                    data-touch="false"
+                    data-name="company"
+                    required
+                    type="text"
+                  />
+                  <p class="form__error"></p>
+                </div>
+                <div class="form__item-wrapper">
+                  <input
+                    class="form__item form__item-3 js-form-input fs12"
+                    placeholder="Телефон"
+                    data-touch="false"
+                    data-name="phone"
+                    required
+                    type="tel"
+                  />
+                  <p class="form__error"></p>
+                </div>
+                <div class="form__item-wrapper">
+                  <input
+                    class="form__item form__item-4 js-form-input fs12"
+                    placeholder="E-mail"
+                    data-touch="false"
+                    data-name="email"
+                    required
+                    type="email"
+                  />
+                  <p class="form__error"></p>
+                </div>
               </div>
               <div class="form__right">
-                <textarea
-                  class="form__textarea fs12"
-                  placeholder="Сообщение"
-                  name="message"
-                  id="message"
-                ></textarea>
+                <div class="form__item-wrapper">
+                  <textarea
+                    class="form__textarea form__item js-form-input fs12"
+                    placeholder="Сообщение"
+                    data-touch="false"
+                    data-name="message"
+                    name="message"
+                    id="message"
+                  ></textarea>
+                  <p class="form__error"></p>
+                </div>
               </div>
             </form>
             <div class="footer__button-wrapper">
               <p class="footer__confidence fs12-fw">
                 * Ваши данные не будут переданы третьим лицам, 100% вероятность.
                 Конфиденциальность мы гарантируем, и защищаем персональные
-                данные согласно законку ФЗ-52.
+                данные согласно закону ФЗ-52.
               </p>
-              <button class="footer__button fs18">Отправить</button>
+              <button type="submit" form="form" class="footer__button form__submit js-form-submit fs18">Отправить</button>
             </div>
           </div>
         </div>
@@ -445,6 +473,7 @@
     </footer>
 
     <div class="popup-background js-popup-background"></div>
+
     <section id="popup" class="popup js-popup">
       <div class="popup__wrapper js-popup-wrapper">
         <button type="button" class="popup__close-button js-popup-close-button">
@@ -457,5 +486,28 @@
         </div>
       </div>
     </section>
+
+    <section class='popup__success popup js-popup-success'>
+      <div class="popup__wrapper js-popup-wrapper">
+        <button type="button" class="popup__close-button js-popup-close-button">
+          <span class="popup__close-button-icon"></span>
+        </button>
+        <div class="popup__content">
+          <p>Ваши данные успешно отправлены!</p>
+        </div>
+      </div>
+    </section>
+
+    <section class='popup__error popup js-popup-error'>
+      <div class="popup__wrapper js-popup-wrapper">
+        <button type="button" class="popup__close-button js-popup-close-button">
+          <span class="popup__close-button-icon"></span>
+        </button>
+        <div class="popup__content">
+          <p>Произошла ошибка!</p>
+        </div>
+      </div>
+    </section>
+
   </body>
 </html>
