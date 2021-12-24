@@ -7,7 +7,7 @@
 
   @media (max-width: $L) {
     width: 770px;
-    margin: 90px auto 0;   
+    margin: 90px auto 0;
   }
 
   @media (max-width: $M) {
@@ -149,11 +149,12 @@
 
 .form {
   display: flex;
-  
+
   &__left {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    position: relative;
 
     width: 390px;
     height: max-content;
@@ -212,6 +213,28 @@
       @media (max-width: $S) {
         order: 3;
       }
+    }
+
+    &_error {
+      border: 1px solid $orangeColor;
+    }
+  }
+
+  &__error {
+    &_show {
+      color: $orangeColor;
+      font-size: 12px;
+      height: 30px;
+      text-transform: none;
+      position: absolute;
+    }
+  }
+
+  &__submit {
+    &:disabled {
+      background: linear-gradient(grey, black);
+      color: black;
+      opacity: 0.2;
     }
   }
 

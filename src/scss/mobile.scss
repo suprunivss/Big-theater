@@ -1,6 +1,7 @@
 .mobile-menu {
     position: relative;
     display: none;
+    z-index: 2;
 
     @media (max-width: $L) {
         display: block;
