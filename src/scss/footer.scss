@@ -183,6 +183,11 @@
     border: 1px solid $grayColor;
     background-color: $goshawkColor;
 
+    &:disabled {
+      background: $grayColor;
+      color: $matterhornColor;
+    }
+
     @media (max-width: $M) {
       width: 230px;
     }
