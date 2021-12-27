@@ -5,9 +5,23 @@ const popupSuccessCloseButton = popupSuccess.querySelector('.js-popup-close-butt
 const popupError = document.querySelector('.js-popup-error');
 const popupErrorCloseButton = popupError.querySelector('.js-popup-close-button');
 const popupBackground = document.querySelector('.js-popup-background');
+const submitSubscribers = new Set();
 
+export function setSuccessSubmitSubscriber(subscriber) {
+  submitSubscribers.add(subscriber);
+}
 
-export function onCloseSuccessPopup() {
+function dispatchSuccessSubmitSubscribers() {
+  submitSubscribers.forEach(subscriber => subscriber())
+}
+
+function onShowPopup(popupItem) {
+  popupItem.classList.add('popup__active');
+  popupBackground.classList.add('popup-background-active');
+  document.body.classList.add('overflow-hidden');
+}
+
+function onCloseSuccessPopup() {
   popupSuccess.classList.remove('popup__active');
   popupBackground.classList.remove('popup-background-active');
   document.body.classList.remove('overflow-hidden');
@@ -15,7 +29,7 @@ export function onCloseSuccessPopup() {
   popupSuccessCloseButton.removeEventListener('click', onCloseSuccessPopup);
 }
 
-export function onCloseErrorPopup() {
+function onCloseErrorPopup() {
   popupError.classList.remove('popup__active');
   popupBackground.classList.remove('popup-background-active');
   document.body.classList.remove('overflow-hidden');
@@ -36,13 +50,14 @@ popupError.addEventListener('click', ({ target }) => {
 })
 
 function onSuccessCallback() {
-  onShowPopup(popupSuccess)
+  onShowPopup(popupSuccess);
+  dispatchSuccessSubmitSubscribers();
 
   popupSuccessCloseButton.addEventListener('click', onCloseSuccessPopup)
 }
 
 function onErrorCallback() {
-  onShowPopup(popupError)
+  onShowPopup(popupError);
 
   popupErrorCloseButton.addEventListener('click', onCloseErrorPopup)
 
@@ -79,7 +94,6 @@ formElement.addEventListener('submit', async (event) => {
     const response = await fetch(request)
     if(response.ok) {
       onSuccessCallback()
-
       formItems.forEach(el => {
         el.value = '';
       })
