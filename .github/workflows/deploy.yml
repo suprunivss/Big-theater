@@ -15,8 +15,8 @@ jobs:
         run: |
           npm ci
           npm run build
-      - name: Deploy 🚀
+      - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.2
         with:
           branch: gh-pages
-          folder: big-theater
+          folder: build
