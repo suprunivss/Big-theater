@@ -2,7 +2,6 @@
   "name": "big_theater",
   "version": "1.0.0",
   "main": "mobile-menu.js",
-
   "scripts": {
     "build": "webpack build",
     "start": "webpack serve --open home.html start",
