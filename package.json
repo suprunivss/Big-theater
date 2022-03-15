@@ -4,7 +4,7 @@
   "main": "mobile-menu.js",
 
   "scripts": {
-    "build": "webpack",
+    "build": "webpack build",
     "start": "webpack serve --open home.html",
     "json": "json-server --watch db.json --delay 1500"
   },
