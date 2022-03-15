@@ -2,6 +2,7 @@
   "name": "big_theater",
   "version": "1.0.0",
   "main": "mobile-menu.js",
+
   "scripts": {
     "build": "webpack",
     "start": "webpack serve --open home.html",
@@ -16,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/suprunivss/Big-theater/issues"
   },
-  "homepage": "https://github.com/suprunivss/Big-theater#readme",
+  "homepage": "https://suprunivss.github.io/big-theater",
   "description": "",
   "browserslist": "> 0.25%",
   "devDependencies": {
